@@ -1,0 +1,7 @@
+
+<h1>Name:{{ object.name }} - age:{{ object.age }} - location:{{ object.location }}</h1>
+
+
+<h2><a href="{% url 'first_project:update' pk=object.id %}">Update</a></h2>
+
+<h2><a href="{% url 'first_project:delete' pk=object.id %}">Delete</a></h2>

@@ -1,0 +1,7 @@
+<h1>Delete{{ object.name }}</h1>
+
+<form action="." method="post">
+    {% csrf_token %}
+    <input type="submit" value="Delete">
+    <a href="{% url 'first_project:details' object.id %}">Back To home</a>
+</form>

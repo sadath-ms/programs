@@ -1,0 +1,19 @@
+<!--
+{% if names %}
+    <ul>
+    {% for i in names %}
+        <li><a href="{% url 'first_project:details' i.id %}">{{ i.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+<h2>Names not found...</h2>
+{% endif %}
+-->
+<ul>
+{% for foo in  object_list %}
+    <li><a href="{% url 'first_project:details' foo.id %}">{{ foo.name }}</a></li>
+
+{% endfor %}
+</ul>
+
+<h2><a href="{% url 'first_project:create' %}">Create</a></h2>
